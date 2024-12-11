@@ -7,12 +7,12 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
   <body>
     <div class="image-wrapper">
-      <img src="./eisenhower-matrix.jpg" alt="Eisenhower Matrix" />
+      <img src="./assets/eisenhower-matrix.jpg" alt="Eisenhower Matrix" />
       <a
         class="more-info"
         href="https://goal-life.com/page/method/matrix-eisenhower"
@@ -35,8 +35,8 @@
           <label class="task">Pay Bills</label>
           <input type="text" class="task" />
           <button class="edit">Edit</button>
-          <button class="delete">
-            <img src="./remove.svg" alt="Remove" />
+          <button class="delete" aria-label="Delete incomplete task">
+            <img src="./assets/remove-icon.svg" alt="Remove" />
           </button>
         </li>
         <li class="edit-mode">
@@ -44,8 +44,8 @@
           <label class="task">Go Shopping</label>
           <input type="text" value="Go Shopping" class="task" />
           <button class="edit">Save</button>
-          <button class="delete">
-            <img src="./remove.svg" alt="Remove" />
+          <button class="delete" aria-label="Delete incomplete task">
+            <img src="./assets/remove-icon.svg" alt="Remove" />
           </button>
         </li>
       </ul>
@@ -56,12 +56,12 @@
           <label class="task">See the Doctor</label>
           <input type="text" class="task" />
           <button class="edit">Edit</button>
-          <button class="delete">
-            <img src="./remove.svg" alt="Remove" />
+          <button class="delete" aria-label="Delete incomplete task">
+            <img src="./assets/remove-icon.svg" alt="Remove" />
           </button>
         </li>
       </ul>
     </div>
-    <script src="app.js"></script>
+    <script src="./script/index.js"></script>
   </body>
 </html>
