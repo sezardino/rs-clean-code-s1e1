@@ -1,67 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple todo application based on Eisenhower Matrix"
+    />
     <title>Todo App</title>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
       rel="stylesheet"
-      type="text/css"
     />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
   <body>
-    <div class="image-wrapper">
-      <img src="./assets/eisenhower-matrix.jpg" alt="Eisenhower Matrix" />
-      <a
-        class="more-info"
-        href="https://goal-life.com/page/method/matrix-eisenhower"
-      >
-        Want more details?
-      </a>
-    </div>
-    <div class="centered-main-page-element">
-      <p id="top-section-for-adding-element-to-list">
-        <label for="new-task"> Add Item </label>
-      </p>
-      <div class="task-row-wrapper">
-        <input id="new-task" class="task" type="text" />
-        <button>Add</button>
-      </div>
-      <h3>Todo</h3>
-      <ul id="incomplete-tasks">
-        <li>
-          <input type="checkbox" />
-          <label class="task">Pay Bills</label>
-          <input type="text" class="task" />
-          <button class="edit">Edit</button>
-          <button class="delete" aria-label="Delete incomplete task">
-            <img src="./assets/remove-icon.svg" alt="Remove" />
+    <header class="header">
+      <h1 class="header__title">Todo App</h1>
+    </header>
+
+    <main class="main">
+      <section class="matrix">
+        <figure class="matrix__figure">
+          <img
+            class="matrix__image"
+            src="./assets/eisenhower-matrix.jpg"
+            alt="Eisenhower Matrix Diagram"
+          />
+          <figcaption class="matrix__caption">
+            Eisenhower Matrix: Prioritize your tasks effectively.
+          </figcaption>
+        </figure>
+        <a
+          class="matrix__link"
+          href="https://goal-life.com/page/method/matrix-eisenhower"
+          >Learn more</a
+        >
+      </section>
+
+      <section class="todo">
+        <div class="todo__add-task">
+          <label class="todo__label" for="new-task">Add Item</label>
+          <input
+            id="new-task"
+            class="todo__input"
+            type="text"
+            aria-label="New Task"
+          />
+          <button class="todo__button todo__button--add" aria-label="Add Task">
+            Add
           </button>
-        </li>
-        <li class="edit-mode">
-          <input type="checkbox" />
-          <label class="task">Go Shopping</label>
-          <input type="text" value="Go Shopping" class="task" />
-          <button class="edit">Save</button>
-          <button class="delete" aria-label="Delete incomplete task">
-            <img src="./assets/remove-icon.svg" alt="Remove" />
-          </button>
-        </li>
-      </ul>
-      <h3>Completed</h3>
-      <ul id="completed-tasks">
-        <li>
-          <input type="checkbox" checked />
-          <label class="task">See the Doctor</label>
-          <input type="text" class="task" />
-          <button class="edit">Edit</button>
-          <button class="delete" aria-label="Delete incomplete task">
-            <img src="./assets/remove-icon.svg" alt="Remove" />
-          </button>
-        </li>
-      </ul>
-    </div>
+        </div>
+
+        <section class="todo__tasks">
+          <h2 class="todo__subtitle">Todo</h2>
+          <ul id="incomplete-tasks" class="todo__list">
+            <li class="todo__item">
+              <input
+                type="checkbox"
+                class="todo__checkbox"
+                aria-label="Mark as complete"
+              />
+              <label class="todo__text">Pay Bills</label>
+              <input type="text" class="todo__input" />
+              <button
+                class="todo__button todo__button--edit"
+                aria-label="Edit Task"
+              >
+                Edit
+              </button>
+              <button
+                class="todo__button todo__button--delete"
+                aria-label="Delete Task"
+              >
+                <img src="./assets/remove-icon.svg" alt="Delete Task" />
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="todo__completed">
+          <h2 class="todo__subtitle">Completed</h2>
+          <ul id="completed-tasks" class="todo__list">
+            <li class="todo__item">
+              <input
+                type="checkbox"
+                checked
+                class="todo__checkbox"
+                aria-label="Mark as incomplete"
+              />
+              <label class="todo__text">See the Doctor</label>
+              <input type="text" class="todo__input" />
+              <button
+                class="todo__button todo__button--edit"
+                aria-label="Edit Task"
+              >
+                Edit
+              </button>
+              <button
+                class="todo__button todo__button--delete"
+                aria-label="Delete Task"
+              >
+                <img src="./assets/remove-icon.svg" alt="Delete Task" />
+              </button>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">Todo App using the Eisenhower Matrix</p>
+    </footer>
+
     <script src="./script/index.js"></script>
   </body>
 </html>
