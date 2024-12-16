@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.header__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Matrix Section */
+.matrix {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.matrix__figure {
+  display: inline-block;
+}
+.matrix__image {
+  width: 100%;
+  max-width: 500px;
+}
+.matrix__caption {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.matrix__link {
+  display: block;
+  margin-top: 15px;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #0073e6;
+}
+
+/* Todo Section */
+.todo {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.todo__add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.todo__input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.todo__button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+.todo__button--add {
+  background-color: #0073e6;
+  color: #fff;
+}
+.todo__button--edit:hover,
+.todo__button--delete:hover {
+  color: #0073e6;
+}
+
+/* Task Lists */
+.todo__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.todo__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+.todo__checkbox {
+  margin-right: 10px;
+}
+.todo__text {
+  flex: 1;
+}
+.todo__button--delete img {
+  height: 16px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #eee;
+}
+.footer__text {
+  font-size: 14px;
+  color: #666;
+}
